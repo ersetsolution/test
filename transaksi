@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rekap Transaksi MUHAMAD RIFAILUN - BCA</title>
+    <style>
+        @page {
+            size: A4;
+            margin: 20mm;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        
+        .container {
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            border-bottom: 3px solid #005BAA;
+            padding-bottom: 20px;
+        }
+        
+        .header h1 {
+            color: #005BAA;
+            margin: 0;
+            font-size: 24px;
+        }
+        
+        .header h2 {
+            color: #666;
+            margin: 10px 0 0 0;
+            font-size: 18px;
+            font-weight: normal;
+        }
+        
+        .info-box {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 30px;
+            border-left: 4px solid #005BAA;
+        }
+        
+        .info-box p {
+            margin: 5px 0;
+            font-size: 14px;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 30px;
+        }
+        
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+        
+        th {
+            background-color: #005BAA;
+            color: white;
+            font-weight: bold;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+        
+        tr:hover {
+            background-color: #e9ecef;
+        }
+        
+        .amount {
+            text-align: right;
+            font-weight: bold;
+        }
+        
+        .credit {
+            color: #28a745;
+        }
+        
+        .debit {
+            color: #dc3545;
+        }
+        
+        .summary {
+            background-color: #e7f3ff;
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        
+        .summary h3 {
+            color: #005BAA;
+            margin-top: 0;
+        }
+        
+        .summary-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
+        
+        .summary-item {
+            background-color: white;
+            padding: 15px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+        
+        .summary-item h4 {
+            margin: 0 0 5px 0;
+            color: #666;
+            font-size: 14px;
+        }
+        
+        .summary-item p {
+            margin: 0;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+            color: #666;
+            font-size: 12px;
+        }
+        
+        .print-button {
+            background-color: #005BAA;
+            color: white;
+            padding: 10px 30px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 20px auto;
+            display: block;
+        }
+        
+        .print-button:hover {
+            background-color: #004080;
+        }
+        
+        @media print {
+            body {
+                background-color: white;
+            }
+            .container {
+                box-shadow: none;
+            }
+            .print-button {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>REKAP TRANSAKSI BCA</h1>
+            <h2>MUHAMAD RIFAILUN</h2>
+        </div>
+        
+        <div class="info-box">
+            <p><strong>No. Rekening:</strong> 7740525845</p>
+            <p><strong>Nama Pemilik:</strong> SURYA</p>
+            <p><strong>Periode:</strong> November - Desember 2024</p>
+            <p><strong>Tanggal Cetak:</strong> <span id="tanggal"></span></p>
+        </div>
+        
+        <h3 style="color: #005BAA;">Transaksi November 2024 (11 transaksi)</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <th>Tanggal</th>
+                    <th>Keterangan</th>
+                    <th>Debit (Rp)</th>
+                    <th>Kredit (Rp)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>01/11/2024</td>
+                    <td>TRSF E-BANKING ke MUHAMAD RIFAILUN</td>
+                    <td class="amount debit">10,000</td>
+                    <td class="amount">-</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>07/11/2024</td>
+                    <td>BI-FAST dari MUHAMAD RIFAILUN</td>
+                    <td class="amount">-</td>
+                    <td class="amount credit">2,050,000</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>07/11/2024</td>
+                    <td>BI-FAST dari MUHAMAD RIFAILUN</td>
+                    <td class="amount">-</td>
+                    <td class="amount credit">150,000</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>09/11/2024</td>
+                    <td>BI-FAST dari MUHAMAD RIFAILUN</td>
+                    <td class="amount">-</td>
+                    <td class="amount credit">400,000</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>16/11/2024</td>
+                    <td>TRSF E-BANKING ke MUHAMAD RIFAILUN</td>
+                    <td class="amount debit">10,000</td>
+                    <td class="amount">-</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>16/11/2024</td>
+                    <td>TRSF E-BANKING ke MUHAMAD RIFAILUN</td>
+                    <td class="amount debit">200</td>
+                    <td class="amount">-</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>21/11/2024</td>
+                    <td>TRSF E-BANKING dari MUHAMAD RIFAILUN</td>
+                    <td class="amount">-</td>
+                    <td class="amount credit">54,000</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>26/11/2024</td>
+                    <td>TRSF E-BANKING dari MUHAMAD RIFAILUN</td>
+                    <td class="amount">-</td>
+                    <td class="amount credit">100,000</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>26/11/2024</td>
+                    <td>BI-FAST dari MUHAMAD RIFAILUN</td>
+                    <td class="amount">-</td>
+                    <td class="amount credit">500,000</td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>27/11/2024</td>
+                    <td>BI-FAST dari MUHAMAD RIFAILUN</td>
+                    <td class="amount">-</td>
+                    <td class="amount credit">1,000,000</td>
+                </tr>
+                <tr>
+                    <td>11</td>
+                    <td>30/11/2024</td>
+                    <td>BI-FAST dari MUHAMAD RIFAILUN</td>
+                    <td class="amount">-</td>
+                    <td class="amount credit">500,000</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <h3 style="color: #005BAA;">Transaksi Desember 2024 (9 transaksi)</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <th>Tanggal</th>
+                    <th>Keterangan</th>
+                    <th>Debit (Rp)</th>
+                    <th>Kredit (Rp)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>01/12/2024</td>
+                    <td>BI-FAST dari MUHAMAD RIFAILUN</td>
+                    <td class="amount">-</td>
+                    <td class="amount credit">1,500,000</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>05/12/2024</td>
+                    <td>TRSF E-BANKING dari MUHAMAD RIFAILUN</td>
+                    <td class="amount">-</td>
+                    <td class="amount credit">1,980,000</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>06/12/2024</td>
+                    <td>BI-FAST dari MUHAMAD RIFAILUN</td>
+                    <td class="amount">-</td>
+                    <td class="amount credit">1,000,000</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>15/12/2024</td>
+                    <td>BI-FAST dari MUHAMAD RIFAILUN</td>
+                    <td class="amount">-</td>
+                    <td class="amount credit">1,000,000</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>17/12/2024</td>
+                    <td>BI-FAST dari MUHAMAD RIFAILUN</td>
+                    <td class="amount">-</td>
+                    <td class="amount credit">500,000</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>20/12/2024</td>
+                    <td>TRSF E-BANKING dari MUHAMAD RIFAILUN</td>
+                    <td class="amount">-</td>
+                    <td class="amount credit">40,000</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>20/12/2024</td>
+                    <td>TRSF E-BANKING ke MUHAMAD RIFAILUN</td>
+                    <td class="amount debit">40,000</td>
+                    <td class="amount">-</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>24/12/2024</td>
+                    <td>TRSF E-BANKING dari MUHAMAD RIFAILUN</td>
+                    <td class="amount">-</td>
+                    <td class="amount credit">1,000,000</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>28/12/2024</td>
+                    <td>BI-FAST dari MUHAMAD RIFAILUN</td>
+                    <td class="amount">-</td>
+                    <td class="amount credit">300,000</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <div class="summary">
+            <h3>RINGKASAN TRANSAKSI</h3>
+            <div class="summary-grid">
+                <div class="summary-item">
+                    <h4>November 2024 - Total Masuk</h4>
+                    <p class="credit">Rp 4,754,000</p>
+                </div>
+                <div class="summary-item">
+                    <h4>November 2024 - Total Keluar</h4>
+                    <p class="debit">Rp 20,200</p>
+                </div>
+                <div class="summary-item">
+                    <h4>Desember 2024 - Total Masuk</h4>
+                    <p class="credit">Rp 7,320,000</p>
+                </div>
+                <div class="summary-item">
+                    <h4>Desember 2024 - Total Keluar</h4>
+                    <p class="debit">Rp 40,000</p>
+                </div>
+            </div>
+            <div style="margin-top: 20px; padding: 15px; background-color: white; border-radius: 5px;">
+                <h4 style="margin: 0 0 10px 0; color: #005BAA;">Total Keseluruhan</h4>
+                <p style="margin: 0;"><strong>Total Masuk (Nov-Des):</strong> <span class="credit">Rp 12,074,000</span></p>
+                <p style="margin: 5px 0 0 0;"><strong>Total Keluar (Nov-Des):</strong> <span class="debit">Rp 60,200</span></p>
+            </div>
+        </div>
+        
+        <button class="print-button" onclick="window.print()">Cetak / Save as PDF</button>
+        
+        <div class="footer">
+            <p>Dokumen ini dicetak pada <span id="tanggal2"></span></p>
+            <p>Rekap Transaksi BCA - MUHAMAD RIFAILUN</p>
+        </div>
+    </div>
+    
+    <script>
+        // Set tanggal hari ini
+        const today = new Date();
+        const options = { year: 'numeric', month: 'long', day: 'numeric' };
+        const tanggalIndo = today.toLocaleDateString('id-ID', options);
+        document.getElementById('tanggal').textContent = tanggalIndo;
+        document.getElementById('tanggal2').textContent = tanggalIndo;
+    </script>
+</body>
+</html>
